@@ -60,7 +60,7 @@ names(Data)<-gsub("BodyBody", "Body", names(Data))
 
 ## Creates a second,independent tidy data set and ouput it
 #In this part,a second, independent tidy data set will be created with the average 
-#of each variable for each activity and each subject  based on the data set in step 4. 
+#of each variable for each activity and each subject  based on the data set 
 
 library(plyr);
 Data2<-aggregate(. ~subject + activity, Data, mean)
