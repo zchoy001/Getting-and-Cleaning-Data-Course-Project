@@ -36,7 +36,8 @@ subdataFeaturesNames<-dataFeaturesNames$V2[grep("mean\\(\\)|std\\(\\)", dataFeat
 
 ##subset the data by selected names of Features
 selectedNames<-c(as.character(subdataFeaturesNames), "subject", "activity" )
-
+## subset by mean and std
+Data<-subset(Data,select=selectedNames)
 
 ## Facorize Variale `activity` in  the data frame `Data` using  descriptive activity names** 
   
